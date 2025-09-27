@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Молочная продукция</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class=" w-[1200px] m-auto bg-gray-100 font-sans text-gray-800">
+
+  <!-- Хедер -->
+  <header class="bg-amber-100">
+    <div class="max-w-6xl mx-auto flex items-center justify-between px-6 py-4">
+      <div class="text-2xl font-bold italic">~AiKOOY~</div>
+      <nav class="hidden md:flex space-x-6 text-sm font-medium">
+        <a href="#" class="hover:text-amber-700">О компании</a>
+        <a href="#" class="hover:text-amber-700">Польза</a>
+        <a href="#" class="hover:text-amber-700">Отзывы</a>
+        <a href="#" class="hover:text-amber-700">Контакты</a>
+      </nav>
+      <button id="menu-btn" class="md:hidden focus:outline-none">
+        ☰
+      </button>
+    </div>
+    <div id="mobile-menu" class="hidden flex-col space-y-2 px-6 pb-4 md:hidden">
+      <a href="#" class="hover:text-amber-700">О компании</a>
+      <a href="#" class="hover:text-amber-700">Польза</a>
+      <a href="#" class="hover:text-amber-700">Отзывы</a>
+      <a href="#" class="hover:text-amber-700">Контакты</a>
+    </div>
+  </header>
+
+  <!-- Герой-блок -->
+  <section class="bg-amber-100 flex flex-col md:flex-row items-center justify-between px-6 md:px-12 py-12">
+    <div class="max-w-md">
+      <h1 class="text-3xl font-bold mb-4">Уникальный вкус</h1>
+      <p class="text-gray-700">
+        Натуральные молочные продукты от лучших ферм Челябинской области –
+        попробуйте и убедитесь сами. Высокое качество и забота о здоровье вашей семьи!
+      </p>
+    </div>
+    <img src="../img/cows-head.png" alt="Корова" class="w-80 mt-8 md:mt-0">
+  </section>
+
+  <!-- Продукция -->
+  <section class="bg-white py-12 px-6 md:px-12">
+    <h2 class="text-2xl font-bold text-center mb-10">Встречайте обновленную продукцию</h2>
+    <div class="grid md:grid-cols-3 gap-10 max-w-6xl mx-auto">
+      <div class="text-center">
+        <img src="../img/236990fa1078617898f2530667cdd099.png" alt="Творог" class="mx-auto w-40">
+        <p class="mt-2 text-sm text-gray-600">Много витаминов</p>
+      </div>
+      <div class="text-center">
+        <img src="../img/51fce30b-0d90-5a0d-b003-ba08bace3695.png" alt="Молоко" class="mx-auto w-40">
+        <p class="mt-2 text-sm text-gray-600">Лучший способ заботиться о здоровье</p>
+      </div>
+      <div class="text-center">
+        <img src="../img/gzesqbq6s204gc4ow4g4wkws00gc80.jpeg" alt="Йогурт" class="mx-auto w-40">
+        <p class="mt-2 text-sm text-gray-600">Полезный продукт</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- История -->
+  <section class="bg-amber-50 py-12 px-6 md:px-12">
+    <div class="max-w-4xl mx-auto">
+      <h2 class="text-2xl font-bold mb-4">Наша история</h2>
+      <p class="text-gray-700">
+        История села начинается с посёлков, основанных ещё в 19 веке. 
+        По сохранившимся данным, сельскохозяйственное производство занимало 
+        важное место в жизни местного населения.
+      </p>
+      <p class="mt-4 text-gray-700">
+        В советское время здесь выращивали зерновые культуры, производили молоко и мясо. 
+        Сегодня наши молочные продукты известны по всей Челябинской области.
+      </p>
+    </div>
+  </section>
+
+  <!-- Польза молока -->
+  <section class="bg-white py-12 px-6 md:px-12">
+    <div class="max-w-6xl mx-auto flex flex-col items-center">
+      <h2 class="text-2xl font-bold mb-[20px]">Польза молока</h2>
+      <div class="relative flex justify-center items-center">
+        <img src="../img/00578039.n_1.png" alt="Молоко" class="w-[200px] mt-[60px] mb-[60px] z-10 left-[20px] ">
+        <div class="absolute inset-0 flex flex-col justify-center items-center">
+          <div class="absolute top-[0px] bg-amber-100 p-[10px] rounded-[15px]">Крепкие кости</div>
+          <div class="absolute right-32 text-sm right-[-75px] bg-amber-100 p-[10px] rounded-[15px]">Витамин D</div>
+          <div class="absolute left-32 text-sm left-[-75px] bg-amber-100 p-[10px] rounded-[15px]">Витамин B</div>
+          <div class="absolute top-[290px] text-sm bg-amber-100 p-[10px] rounded-[15px]">Энергия</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Футер -->
+  <footer class="bg-amber-100 py-6 text-center text-gray-700">
+     2025 AiKOOY. Все права защищены!!!.
+  </footer>
+
+  <!-- JS для меню -->
+  <script>
+    const menuBtn = document.getElementById('menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    menuBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+  </script>
+
+</body>
+</html>
